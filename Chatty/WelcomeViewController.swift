@@ -6,34 +6,15 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
-    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var titleLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateLabel(with: titleLable, timeInterval: 0.15)
+        titleLabel.text = titleLabel.text //this will trigger typing animation. this is the only way to do this atm
     }
-    
-    func animateLabel(with label: UILabel, timeInterval interval: Double) {
-        if label.text == nil {
-            return
-        }
-        
-        let temp = label.text!
-        if temp.isEmpty {
-            return
-        }
-        
-        label.text = ""
-        var timerInterval: Double = 0
-        
-        for char in temp {
-            timerInterval += interval
-            Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: false) { Timer in
-                self.titleLable.text?.append(char)
-            }
-        }
-    }
+
 }
 
