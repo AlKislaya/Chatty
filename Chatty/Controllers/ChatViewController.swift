@@ -13,6 +13,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Constants.Core.appName
         navigationItem.hidesBackButton = true
     }
     
@@ -21,7 +22,7 @@ class ChatViewController: UIViewController {
           try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
-            alertController.showDefaultAlert(title: "Something went wrong :((", message: signOutError.localizedDescription, sender: self)
+            alertController.showDefaultAlert(title: Constants.Errors.smthWentWrong, message: signOutError.localizedDescription, sender: self)
         }
     }
 }

@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = titleLabel.text //this will trigger typing animation. this is the only way to do this atm
+        titleLabel.text = Constants.Core.appName
     }
 
 }
