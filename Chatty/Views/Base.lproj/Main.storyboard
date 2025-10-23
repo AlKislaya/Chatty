@@ -224,8 +224,11 @@
                                         <rect key="frame" x="0.0" y="124" width="414" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Log In">
-                                            <color key="titleColor" name="BrandLightBlue"/>
+                                            <color key="titleColor" name="BrandRed"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLoginPressed:" destination="5v2-hE-4Ub" eventType="touchUpInside" id="j2Y-f7-5Np"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -258,6 +261,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="uLf-Jv-W5H"/>
                     <connections>
+                        <outlet property="emailTextField" destination="F21-w0-z4z" id="IRt-B1-G5j"/>
+                        <outlet property="passwordTextField" destination="abR-gz-opL" id="oHy-KL-dbl"/>
                         <segue destination="lwd-AH-u8E" kind="show" identifier="loginToChat" id="UhU-RC-JJC"/>
                     </connections>
                 </viewController>
@@ -265,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="698.4375"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="yeH-Ia-3JZ">
             <objects>
-                <viewController id="lwd-AH-u8E" sceneMemberID="viewController">
+                <viewController id="lwd-AH-u8E" customClass="ChatViewController" customModule="Chatty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEy-W8-acN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +339,13 @@
                             <constraint firstItem="S6L-hg-cne" firstAttribute="top" secondItem="6YX-ca-E8f" secondAttribute="top" id="sQt-L5-8LV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q5u-eL-Bgp"/>
+                    <navigationItem key="navigationItem" id="Q5u-eL-Bgp" customClass="ch">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="KyK-Ib-Cal">
+                            <connections>
+                                <action selector="onLogOutPressed:" destination="lwd-AH-u8E" id="PbT-69-pGe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFP-qE-CyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,7 +371,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BlI-qG-UUN"/>
+        <segue reference="UhU-RC-JJC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
@@ -376,6 +387,9 @@
         </namedColor>
         <namedColor name="BrandPurple">
             <color red="0.61176470588235299" green="0.68627450980392157" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandRed">
+            <color red="0.83899998664855957" green="0.66299998760223389" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
