@@ -8,7 +8,7 @@
 import UIKit
 
 class AlertController {
-    func showDefaultAlert(title: String, message: String, sender: UIViewController) {
+    static func showDefaultAlert(title: String, message: String, sender: UIViewController) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString(Constants.Core.ok, comment: Constants.Core.ok), style: .default, handler: { _ in
                 alert.dismiss(animated: true)

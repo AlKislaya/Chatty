@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAuth
 
 class ChatViewController: UIViewController {
-    let alertController = AlertController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,7 @@ class ChatViewController: UIViewController {
           try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
-            alertController.showDefaultAlert(title: Constants.Errors.smthWentWrong, message: signOutError.localizedDescription, sender: self)
+            AlertController.showDefaultAlert(title: Constants.Errors.smthWentWrong, message: signOutError.localizedDescription, sender: self)
         }
     }
 }

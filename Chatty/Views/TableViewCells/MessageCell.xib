@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Chatty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xtU-C4-4Sm">
+                        <rect key="frame" x="10" y="10" width="313" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtk-Os-196">
+                                <rect key="frame" x="0.0" y="0.0" width="258" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-f2-JbZ">
+                                        <rect key="frame" x="10" y="10" width="238" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGray6Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandDarkGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="y1g-f2-JbZ" secondAttribute="bottom" constant="10" id="3uv-S5-0q7"/>
+                                    <constraint firstItem="y1g-f2-JbZ" firstAttribute="leading" secondItem="gtk-Os-196" secondAttribute="leading" constant="10" id="4TA-ht-E52"/>
+                                    <constraint firstAttribute="trailing" secondItem="y1g-f2-JbZ" secondAttribute="trailing" constant="10" id="TDj-BP-RVE"/>
+                                    <constraint firstItem="y1g-f2-JbZ" firstAttribute="top" secondItem="gtk-Os-196" secondAttribute="top" constant="10" id="eNi-4A-Gsi"/>
+                                    <constraint firstAttribute="height" constant="40" id="kDe-oD-AW0"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hHm-Ri-z4E">
+                                <rect key="frame" x="273" y="0.66666666666666785" width="40" height="38.666666666666657"/>
+                                <color key="tintColor" name="BrandDarkGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hyP-Rz-So3"/>
+                                    <constraint firstAttribute="width" constant="40" id="ugE-WK-zY3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xtU-C4-4Sm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3mu-wV-jvt"/>
+                    <constraint firstAttribute="bottom" secondItem="xtU-C4-4Sm" secondAttribute="bottom" constant="10" id="4Gn-vc-yWQ"/>
+                    <constraint firstAttribute="trailing" secondItem="xtU-C4-4Sm" secondAttribute="trailing" constant="10" id="gih-h9-TxW"/>
+                    <constraint firstItem="xtU-C4-4Sm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qCG-PJ-nuw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageLabel" destination="y1g-f2-JbZ" id="2UK-oo-ZQl"/>
+                <outlet property="viewBubble" destination="gtk-Os-196" id="Nnn-G0-y9Y"/>
+            </connections>
+            <point key="canvasLocation" x="148.85496183206106" y="93.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="BrandDarkGreen">
+            <color red="0.6119999885559082" green="0.68599998950958252" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
