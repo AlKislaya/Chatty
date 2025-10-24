@@ -16,13 +16,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func onLoginPressed(_ sender: UIButton) {
-        var email = emailTextField.text!
+        let email = emailTextField.text!
         if email.isEmpty {
             AlertController.showDefaultAlert(title: Constants.Errors.smthWentWrong, message: Constants.Errors.emailNotProvided, sender: self)
             return
         }
         
-        var password = passwordTextField.text!
+        let password = passwordTextField.text!
         if password.isEmpty {
             AlertController.showDefaultAlert(title: Constants.Errors.smthWentWrong, message: Constants.Errors.passwordNotProvided, sender: self)
             return
