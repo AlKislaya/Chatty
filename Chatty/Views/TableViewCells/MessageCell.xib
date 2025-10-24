@@ -21,11 +21,19 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xtU-C4-4Sm">
                         <rect key="frame" x="10" y="10" width="313" height="50"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IPa-aH-qvP">
+                                <rect key="frame" x="0.0" y="0.66666666666666785" width="40" height="38.666666666666657"/>
+                                <color key="tintColor" name="BrandLightGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Yu-fY-WH7"/>
+                                    <constraint firstAttribute="width" constant="40" id="vjq-ho-WGw"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtk-Os-196">
-                                <rect key="frame" x="0.0" y="0.0" width="258" height="40"/>
+                                <rect key="frame" x="55" y="0.0" width="203" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-f2-JbZ">
-                                        <rect key="frame" x="10" y="10" width="238" height="20"/>
+                                        <rect key="frame" x="10" y="10" width="183" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray6Color"/>
                                         <nil key="highlightedColor"/>
@@ -60,16 +68,22 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="companionAvatar" destination="IPa-aH-qvP" id="8Mo-xS-TFt"/>
                 <outlet property="messageLabel" destination="y1g-f2-JbZ" id="2UK-oo-ZQl"/>
+                <outlet property="userAvatar" destination="hHm-Ri-z4E" id="A1T-NW-6wm"/>
                 <outlet property="viewBubble" destination="gtk-Os-196" id="Nnn-G0-y9Y"/>
             </connections>
             <point key="canvasLocation" x="148.85496183206106" y="93.661971830985919"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="BrandDarkGreen">
             <color red="0.6119999885559082" green="0.68599998950958252" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLightGreen">
+            <color red="0.83899998664855957" green="0.85500001907348633" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

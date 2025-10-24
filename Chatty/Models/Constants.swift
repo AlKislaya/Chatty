@@ -25,6 +25,12 @@ struct Constants {
             static let reusableCellIdentifier = "ReusableCell"
         }
     }
+    struct BrandColors {
+        static let darkGreen = "BrandDarkGreen"
+        static let lightGreen = "BrandLightGreen"
+        static let red = "BrandRed"
+        static let sandColor = "BrandSandColor"
+    }
     struct FStore {
         static let collectionName = "messages"
         static let senderField = "sender"
