@@ -19,4 +19,16 @@ struct Constants {
         static let emailNotProvided = "Seems like you forgot to provide your email"
         static let passwordNotProvided = "Seems like you forgot to provide your password"
     }
+    struct Objects {
+        struct TableView {
+            static let messageCellNibName = "MessageCell"
+            static let reusableCellIdentifier = "ReusableCell"
+        }
+    }
+    struct FStore {
+        static let collectionName = "messages"
+        static let senderField = "sender"
+        static let bodyField = "body"
+        static let dateField = "date"
+    }
 }
